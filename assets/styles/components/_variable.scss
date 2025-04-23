@@ -1,0 +1,77 @@
+/* index.scss */
+
+/* Style global */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+}
+
+/* Header */
+.site-title {
+    text-align: center;
+    font-weight: bold;
+    font-size: 2rem; /* Ajuste la taille du titre */
+    margin: 20px 0;
+}
+
+/* Section de localisation */
+.location {
+    background-color: #d3d3d3; /* Gris */
+    padding: 50px 0;
+    text-align: center;
+}
+
+.location-content {
+    background-image: url('assets/images/position.png'); /* Image de localisation */
+    background-size: cover;
+    padding: 50px;
+}
+
+.city-name {
+    font-size: 2rem;
+    color: white;
+    font-weight: bold;
+}
+
+/* Section réservation */
+.reservation {
+    background-color: #f0f0f0; /* Gris clair */
+    padding: 40px 0;
+    text-align: center;
+}
+
+.reservation-title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.reservation-subtitle {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.explore-button {
+    padding: 10px 20px;
+    background: linear-gradient(90deg, #9356DC, #FF79DA);
+    color: white;
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+.explore-button:hover {
+    background: linear-gradient(90deg, #FF79DA, #9356DC);
+}
+
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #333;
+    color: white;
+}
