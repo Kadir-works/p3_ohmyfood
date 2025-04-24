@@ -1,0 +1,57 @@
+.fonctionnement {
+    background-color: #fff;
+    padding: 30px 20px;
+  
+    h2 {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+  
+    .card-fonctionne {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+  
+      .step {
+        position: relative;
+        display: flex;
+        align-items: center;
+        height: 72px;
+        background-color: #f6f6f6;
+        border-radius: 20px;
+        padding-left: 50px;
+        font-weight: 500;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  
+        i {
+          margin-right: 20px;
+          color: #7e7e7e;
+          font-size: 20px;
+        }
+        .fa-store{
+            color: #9356dc;
+        }
+  
+        p {
+          margin: 0;
+        }
+  
+        .step-number {
+          position: absolute;
+          left: -10px;
+          top: 50%;
+          transform: translateY(-50%);
+          background-color: #9356dc;
+          color: white;
+          border-radius: 50%;
+          width: 24px;
+          height: 24px;
+          font-size: 14px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+      }
+    }
+  }
+  

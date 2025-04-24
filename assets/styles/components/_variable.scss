@@ -1,21 +1,16 @@
-/* index.scss */
-
-/* Style global */
-body {
-    font-family: 'Roboto', sans-serif;
+/* Reset de base */
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Police globale */
+  body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px; // base mobile
     background-color: #fff;
-}
-
-/* Header */
-.site-title {
-    font-family: 'Shrikhand', cursive;
-    text-align: center;
-    font-weight: bold;
-    font-size: 2rem; /* Ajuste la taille du titre */
-    margin: 20px 0;
-}
-
-
+    color: #000;
+  }
+  
 
