@@ -1,0 +1,62 @@
+// <!-- Section 1: Image de localisation avec Paris et Belleville -->
+.location {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #EAEAEA;
+    height: 50px;
+    h2 {
+        margin: 0;
+        font-size: 16px;
+    }
+    .fa-solid {
+        margin-right: 8px;
+    }
+}
+
+// <!-- Section 2: Réservez le menu -->
+.reservation{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 40px 25px;
+    h2{
+        text-align: center;
+        margin: 23px 0 5px 0;
+    }
+    p{
+        text-align: center;
+    }
+}
+
+
+// .city-name i {
+//     margin-right: 8px;
+//     color: #353535; // une couleur grise, par exemple
+//   }
+  
+// .city-name {
+//     font-size: 2rem;
+//     color: #353535;
+//     font-weight: bold;
+// }
+
+// /* Section réservation */
+// .reservation {
+//     background-color: #F6F6F6; /* Gris clair */
+//     padding: 40px 0;
+//     text-align: center;
+// }
+
+// .reservation-title {
+//     font-size: 2rem;
+//     font-weight: bold;
+//     margin-bottom: 10px;
+// }
+
+// .reservation-subtitle {
+//     font-size: 1.2rem;
+//     color: #555;
+//     margin-bottom: 20px;
+// }
