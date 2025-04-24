@@ -10,6 +10,7 @@ body {
 
 /* Header */
 .site-title {
+  font-family: "Shrikhand", cursive;
   text-align: center;
   font-weight: bold;
   font-size: 2rem; /* Ajuste la taille du titre */
@@ -18,26 +19,25 @@ body {
 
 /* Section de localisation */
 .location {
-  background-color: #d3d3d3; /* Gris */
-  padding: 50px 0;
+  background-color: #EAEAEA; /* Gris */
   text-align: center;
+  height: 50px;
 }
 
-.location-content {
-  background-image: url("assets/images/position.png"); /* Image de localisation */
-  background-size: cover;
-  padding: 50px;
+.city-name i {
+  margin-right: 8px;
+  color: #353535;
 }
 
 .city-name {
   font-size: 2rem;
-  color: white;
+  color: #353535;
   font-weight: bold;
 }
 
 /* Section réservation */
 .reservation {
-  background-color: #f0f0f0; /* Gris clair */
+  background-color: #F6F6F6; /* Gris clair */
   padding: 40px 0;
   text-align: center;
 }
@@ -61,7 +61,7 @@ body {
   font-size: 1.1rem;
   font-weight: bold;
   text-decoration: none;
-  border-radius: 5px;
+  border-radius: 20px;
   transition: background 0.3s ease;
 }
 
@@ -69,9 +69,33 @@ body {
   background: linear-gradient(90deg, #FF79DA, #9356DC);
 }
 
-footer {
-  text-align: center;
-  padding: 10px 0;
-  background-color: #333;
-  color: white;
+.footer {
+  background-color: #000;
+  color: #fff;
+  padding: 2rem;
+  text-align: left;
+}
+.footer .footer-logo {
+  font-family: "Shrikhand", cursive;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+.footer .footer-links {
+  list-style: none;
+  padding: 0;
+}
+.footer .footer-links li {
+  margin: 0.5rem 0;
+  display: flex;
+  align-items: center;
+}
+.footer .footer-links li i {
+  margin-right: 10px;
+}
+.footer .footer-links li a {
+  color: #fff;
+  text-decoration: none;
+}
+.footer .footer-links li a:hover {
+  text-decoration: underline;
 }/*# sourceMappingURL=index.css.map */

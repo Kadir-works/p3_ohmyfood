@@ -5,7 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ohmyfood Paris</title>
     <link rel="stylesheet" href="assets/styles/index.css" />
-    <!-- lien vers le fichier CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      integrity="sha512-..."
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <!-- Header -->
@@ -15,9 +25,9 @@
 
     <!-- Section 1: Image de localisation avec Paris et Belleville -->
     <section class="location">
-      <div class="location-content">
-        <h2 class="city-name">Paris, Belleville</h2>
-      </div>
+      <h2 class="city-name">
+        <i class="fa-solid fa-location-dot"></i> Paris, Belleville
+      </h2>
     </section>
 
     <!-- Section 2: Réservez le menu -->
@@ -30,8 +40,20 @@
     </section>
 
     <!-- Footer -->
-    <footer>
-      <p>&copy; 2025 Ohmyfood Paris</p>
+    <footer class="footer">
+      <h2 class="footer-logo">ohmyfood</h2>
+      <ul class="footer-links">
+        <li>
+          <i class="fa-solid fa-utensils"></i>
+          Proposer un restaurant
+        </li>
+        <li>
+          <i class="fa-solid fa-handshake-angle"></i>
+          Devenir partenaire
+        </li>
+        <li>Mentions légales</li>
+        <li><a href="mailto:contact@ohmyfood.fr">Contact</a></li>
+      </ul>
     </footer>
   </body>
 </html>
