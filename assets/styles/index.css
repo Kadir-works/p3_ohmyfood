@@ -14,19 +14,38 @@ body {
 }
 
 .explore-button {
-  margin: 10px;
-  padding: 18px 20px;
-  background: linear-gradient(90deg, #9356DC, #FF79DA);
+  display: block;
+  margin: 40px auto 0 auto;
+  background: linear-gradient(#9356DC, #FF79DA);
   color: white;
-  font-size: 1.1rem;
-  font-weight: bold;
+  border: none;
+  padding: 15px 30px;
+  border-radius: 25px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
   text-decoration: none;
-  border-radius: 30px;
-  transition: background 0.3s ease;
+}
+.explore-button:hover {
+  filter: brightness(1.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-.explore-button:hover {
-  background: linear-gradient(90deg, #FF79DA, #9356DC);
+.btn-order {
+  display: block;
+  margin: 40px auto 0 auto;
+  background: linear-gradient(#9356DC, #FF79DA);
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  border-radius: 25px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.btn-order:hover {
+  filter: brightness(1.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .footer {
@@ -92,12 +111,24 @@ body {
 }
 
 /* Header */
-.site-title {
+.header-menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 20px 0;
+}
+.header-menu .back-btn {
+  position: absolute;
+  left: 20px;
+  font-size: 24px;
+  color: black;
+  text-decoration: none;
+}
+.header-menu h1 {
   font-family: "Shrikhand", cursive;
-  text-align: center;
-  font-weight: bold;
-  font-size: 2rem; /* Ajuste la taille du titre */
-  margin: 20px 0;
+  font-size: 28px;
+  margin: 0;
 }
 
 .fonctionnement {
@@ -316,20 +347,4 @@ h1 {
 }
 .menu-container .menu-section .dish .check-icon i {
   font-size: 18px;
-}
-.menu-container .btn-order {
-  display: block;
-  margin: 40px auto 0 auto;
-  background: linear-gradient(#9356DC, #FF79DA);
-  color: white;
-  border: none;
-  padding: 15px 30px;
-  border-radius: 25px;
-  font-size: 16px;
-  cursor: pointer;
-  transition: 0.3s;
-}
-.menu-container .btn-order:hover {
-  filter: brightness(1.1);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }/*# sourceMappingURL=index.css.map */

@@ -1,15 +1,40 @@
-.explore-button {
-    margin: 10px;
-    padding: 18px 20px;
-    background: linear-gradient(90deg, #9356DC, #FF79DA);
-    color: white;
-    font-size: 1.1rem;
-    font-weight: bold;
-    text-decoration: none;
-    border-radius: 30px;
-    transition: background 0.3s ease;
-}
 
-.explore-button:hover {
-    background: linear-gradient(90deg, #FF79DA, #9356DC);
-}
+// le bouton de la page d'accueil
+.explore-button {
+    display: block;
+    margin: 40px auto 0 auto;
+    background: linear-gradient(#9356DC, #FF79DA);
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 25px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+    text-decoration: none;
+
+    &:hover {
+      filter: brightness(1.1);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+  }
+
+//   le bouton de la page de menu
+
+.btn-order {
+    display: block;
+    margin: 40px auto 0 auto;
+    background: linear-gradient(#9356DC, #FF79DA);
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 25px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+
+    &:hover {
+      filter: brightness(1.1);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+  }
