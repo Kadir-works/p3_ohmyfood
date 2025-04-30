@@ -1,0 +1,36 @@
+@keyframes fadeInSlide {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+// Style du label pour le cœur
+.heart-container {
+    display: inline-block;
+    cursor: pointer;
+  
+    .heart-checkbox {
+      display: none; // cache le checkbox
+    }
+  
+    .fa-heart {
+      color: #aaa; // couleur du cœur vide
+      font-size: 24px;
+      transition: color 0.3s ease;
+    }
+  
+    // Au survol, cœur change de couleur
+    .heart-container:hover .fa-heart {
+      color: #e63946; // cœur devient rouge lors du survol
+    }
+  
+    // Lorsqu'on clique et que le checkbox est coché, le cœur devient rempli
+    .heart-checkbox:checked + .fa-heart {
+      color: #e63946; // cœur rempli de couleur rouge
+    }
+  }
+  

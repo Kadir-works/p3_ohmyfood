@@ -13,6 +13,35 @@ body {
   color: #000;
 }
 
+@keyframes fadeInSlide {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.heart-container {
+  display: inline-block;
+  cursor: pointer;
+}
+.heart-container .heart-checkbox {
+  display: none;
+}
+.heart-container .fa-heart {
+  color: #aaa;
+  font-size: 24px;
+  transition: color 0.3s ease;
+}
+.heart-container .heart-container:hover .fa-heart {
+  color: #e63946;
+}
+.heart-container .heart-checkbox:checked + .fa-heart {
+  color: #e63946;
+}
+
 .explore-button {
   display: block;
   margin: 40px auto 0 auto;
@@ -298,6 +327,40 @@ h1 {
   margin-top: 5px;
 }
 .menu-container .menu-section .dish {
+  opacity: 0;
+  animation: fadeInSlide 1s ease forwards;
+}
+.menu-container .menu-section .dish:nth-child(1) {
+  animation-delay: 0.1s;
+}
+.menu-container .menu-section .dish:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.menu-container .menu-section .dish:nth-child(3) {
+  animation-delay: 0.3s;
+}
+.menu-container .menu-section .dish:nth-child(4) {
+  animation-delay: 0.4s;
+}
+.menu-container .menu-section .dish:nth-child(5) {
+  animation-delay: 0.5s;
+}
+.menu-container .menu-section .dish:nth-child(6) {
+  animation-delay: 0.6s;
+}
+.menu-container .menu-section .dish:nth-child(7) {
+  animation-delay: 0.7s;
+}
+.menu-container .menu-section .dish:nth-child(8) {
+  animation-delay: 0.8s;
+}
+.menu-container .menu-section .dish:nth-child(9) {
+  animation-delay: 0.9s;
+}
+.menu-container .menu-section .dish:nth-child(10) {
+  animation-delay: 1s;
+}
+.menu-container .menu-section .dish {
   display: block;
   cursor: pointer;
   margin-bottom: 15px;
@@ -317,13 +380,21 @@ h1 {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   transition: transform 0.2s ease;
 }
+.menu-container .menu-section .dish .dish-content .dish-text {
+  flex: 1;
+  margin-right: 10px;
+  overflow: hidden;
+}
+.menu-container .menu-section .dish .dish-content .dish-text h4, .menu-container .menu-section .dish .dish-content .dish-text p {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: block;
+}
 .menu-container .menu-section .dish .dish-content .dish-text h4 {
   font-size: 16px;
   margin: 0 0 5px 0;
   font-weight: 500;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
 }
 .menu-container .menu-section .dish .dish-content .dish-text p {
   margin: 0;
@@ -333,6 +404,7 @@ h1 {
 .menu-container .menu-section .dish .dish-content .dish-price {
   font-weight: bold;
   color: #353535;
+  transition: margin-right 0.3s ease;
 }
 .menu-container .menu-section .dish .dish-content .check-icon {
   position: absolute;
@@ -346,12 +418,18 @@ h1 {
   justify-content: center;
   align-items: center;
   transition: right 0.3s ease, opacity 0.3s ease;
-  opacity: 0;
 }
 .menu-container .menu-section .dish .dish-content .check-icon i {
   font-size: 18px;
 }
 .menu-container .menu-section .dish input[type=checkbox]:checked + .dish-content .check-icon {
   right: 0;
+  opacity: 1;
+}
+.menu-container .menu-section .dish input[type=checkbox]:checked + .dish-content .dish-price {
+  margin-right: 50px;
+}
+.menu-container .menu-section .dish input[type=checkbox]:not(:checked) .check-icon {
+  right: 15px;
   opacity: 1;
 }/*# sourceMappingURL=index.css.map */
