@@ -1,12 +1,13 @@
 // La palette du goût
 
 h1 {
-    font-family: 'Shrikhand', cursive;
-    text-align: center;
-    font-weight: bold;
-    font-size: 2rem; /* Ajuste la taille du titre */
-    margin: 20px 0;
+  font-family: 'Shrikhand', cursive;
+  text-align: center;
+  font-weight: bold;
+  font-size: 2rem;
+  margin: 20px 0;
 }
+
 // image 
 .cover {
   width: 100%;
@@ -17,7 +18,7 @@ h1 {
   img {
     width: 100%;
     height: 100%;
-    object-fit: cover; 
+    object-fit: cover;
     display: block;
   }
 }
@@ -29,68 +30,72 @@ h1 {
   top: -40px;
   z-index: 1;
   padding: 20px;
-  
-    .menu-title {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-  
-      h2 {
-        font-family: 'Shrikhand', cursive;
-        font-size: 24px;
-        margin: 0;
-      }
-  
-      i {
-        font-size: 22px;
-        color: #000;
-        cursor: pointer;
-  
-        &:hover {
-          color: #9356DC;
-          transition: color 0.3s;
-        }
+
+  .menu-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    h2 {
+      font-family: 'Shrikhand', cursive;
+      font-size: 24px;
+      margin: 0;
+    }
+
+    i {
+      font-size: 22px;
+      color: #000;
+      cursor: pointer;
+
+      &:hover {
+        color: #9356DC;
+        transition: color 0.3s;
       }
     }
-  
-    .menu-section {
-      margin-top: 30px;
-  
-      h3 {
-        font-size: 16px;
-        font-weight: 300;
-        text-transform: uppercase;
-        margin-bottom: 10px;
-        position: relative;
-  
-        &::after {
-          content: '';
-          display: block;
-          width: 40px;
-          height: 3px;
-          background: #99E2D0;
-          margin-top: 5px;
-        }
+  }
+
+  .menu-section {
+    margin-top: 30px;
+
+    h3 {
+      font-size: 16px;
+      font-weight: 300;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+      position: relative;
+
+      &::after {
+        content: '';
+        display: block;
+        width: 40px;
+        height: 3px;
+        background: #99E2D0;
+        margin-top: 5px;
       }
-  
-      .dish {
+    }
+
+    // plat sélectionnable
+    .dish {
+      display: block;
+      cursor: pointer;
+      margin-bottom: 15px;
+
+      input[type="checkbox"] {
+        display: none;
+      }
+
+      .dish-content {
         background: white;
         border-radius: 15px;
         padding: 15px;
-        margin-bottom: 15px;
         display: flex;
         justify-content: space-between;
         align-items: center;
         position: relative;
         overflow: hidden;
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        cursor: pointer;
-  
-        &:hover .check-icon {
-          right: 15px;
-          opacity: 1;
-        }
-  
+        transition: transform 0.2s ease;
+
         .dish-text {
           h4 {
             font-size: 16px;
@@ -100,19 +105,19 @@ h1 {
             overflow: hidden;
             text-overflow: ellipsis;
           }
-  
+
           p {
             margin: 0;
             font-size: 14px;
             color: #7e7e7e;
           }
         }
-  
+
         .dish-price {
           font-weight: bold;
           color: #353535;
         }
-  
+
         .check-icon {
           position: absolute;
           right: -50px;
@@ -126,14 +131,29 @@ h1 {
           align-items: center;
           transition: right 0.3s ease, opacity 0.3s ease;
           opacity: 0;
-  
+
           i {
             font-size: 18px;
           }
         }
       }
+
+      // Si coché → effet visible
+      input[type="checkbox"]:checked + .dish-content {
+        .check-icon {
+          right: 0;
+          opacity: 1;
+        }
+
+      }
+
+      // Hover uniquement si pas encore sélectionné
+      // input[type="checkbox"]:not(:checked)  {
+      //   .check-icon {
+      //     right: 15px;
+      //     opacity: 1;
+      //   }
+      // }
     }
-  
-    
   }
-  
+}

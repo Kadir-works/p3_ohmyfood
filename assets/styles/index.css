@@ -234,7 +234,7 @@ h1 {
   font-family: "Shrikhand", cursive;
   text-align: center;
   font-weight: bold;
-  font-size: 2rem; /* Ajuste la taille du titre */
+  font-size: 2rem;
   margin: 20px 0;
 }
 
@@ -298,23 +298,26 @@ h1 {
   margin-top: 5px;
 }
 .menu-container .menu-section .dish {
+  display: block;
+  cursor: pointer;
+  margin-bottom: 15px;
+}
+.menu-container .menu-section .dish input[type=checkbox] {
+  display: none;
+}
+.menu-container .menu-section .dish .dish-content {
   background: white;
   border-radius: 15px;
   padding: 15px;
-  margin-bottom: 15px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   position: relative;
   overflow: hidden;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  cursor: pointer;
+  transition: transform 0.2s ease;
 }
-.menu-container .menu-section .dish:hover .check-icon {
-  right: 15px;
-  opacity: 1;
-}
-.menu-container .menu-section .dish .dish-text h4 {
+.menu-container .menu-section .dish .dish-content .dish-text h4 {
   font-size: 16px;
   margin: 0 0 5px 0;
   font-weight: 500;
@@ -322,16 +325,16 @@ h1 {
   overflow: hidden;
   text-overflow: ellipsis;
 }
-.menu-container .menu-section .dish .dish-text p {
+.menu-container .menu-section .dish .dish-content .dish-text p {
   margin: 0;
   font-size: 14px;
   color: #7e7e7e;
 }
-.menu-container .menu-section .dish .dish-price {
+.menu-container .menu-section .dish .dish-content .dish-price {
   font-weight: bold;
   color: #353535;
 }
-.menu-container .menu-section .dish .check-icon {
+.menu-container .menu-section .dish .dish-content .check-icon {
   position: absolute;
   right: -50px;
   background: #99E2D0;
@@ -345,6 +348,10 @@ h1 {
   transition: right 0.3s ease, opacity 0.3s ease;
   opacity: 0;
 }
-.menu-container .menu-section .dish .check-icon i {
+.menu-container .menu-section .dish .dish-content .check-icon i {
   font-size: 18px;
+}
+.menu-container .menu-section .dish input[type=checkbox]:checked + .dish-content .check-icon {
+  right: 0;
+  opacity: 1;
 }/*# sourceMappingURL=index.css.map */
