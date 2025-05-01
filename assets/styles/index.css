@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* Reset de base */
 * {
   margin: 0;
@@ -13,6 +14,80 @@ body {
   color: #000;
 }
 
+/* Loader full screen */
+#loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: white;
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: fadeOut 1s ease 2.5s forwards; /* Disparition après 2.5s */
+}
+
+/* Animation d'apparition de lettres */
+.loader-text span {
+  font-family: "Shrikhand", cursive;
+  font-size: 2.5rem;
+  color: #9356DC;
+  opacity: 0;
+  animation: appear 0.4s ease forwards;
+  display: inline-block;
+}
+
+.loader-text span:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.loader-text span:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.loader-text span:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+.loader-text span:nth-child(4) {
+  animation-delay: 0.6s;
+}
+
+.loader-text span:nth-child(5) {
+  animation-delay: 0.8s;
+}
+
+.loader-text span:nth-child(6) {
+  animation-delay: 1s;
+}
+
+.loader-text span:nth-child(7) {
+  animation-delay: 1.2s;
+}
+
+.loader-text span:nth-child(8) {
+  animation-delay: 1.4s;
+}
+
+@keyframes appear {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+}
+/* Disparition du loader */
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
 @keyframes fadeInSlide {
   0% {
     opacity: 0;
@@ -23,23 +98,36 @@ body {
     transform: translateY(0);
   }
 }
-.heart-container {
+.heart-toggle {
+  position: relative;
   display: inline-block;
-  cursor: pointer;
+  width: 24px;
+  height: 24px;
 }
-.heart-container .heart-checkbox {
+.heart-toggle input {
   display: none;
 }
-.heart-container .fa-heart {
-  color: #aaa;
+.heart-toggle .fa-heart {
+  position: absolute;
+  top: 0;
+  left: 0;
   font-size: 24px;
-  transition: color 0.3s ease;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  cursor: pointer;
 }
-.heart-container .heart-container:hover .fa-heart {
-  color: #e63946;
+.heart-toggle .heart-empty {
+  color: #bbb;
+  opacity: 1;
 }
-.heart-container .heart-checkbox:checked + .fa-heart {
-  color: #e63946;
+.heart-toggle .heart-full {
+  color: #9356DC;
+  opacity: 0;
+}
+.heart-toggle input:checked ~ .heart-empty {
+  opacity: 0;
+}
+.heart-toggle input:checked ~ .heart-full {
+  opacity: 1;
 }
 
 .explore-button {
@@ -78,7 +166,7 @@ body {
 }
 
 .footer {
-  background-color: #000;
+  background-color: #353535;
   color: #fff;
   padding: 2rem;
   text-align: left;
@@ -87,6 +175,7 @@ body {
   font-family: "Shrikhand", cursive;
   font-size: 1.5rem;
   margin-bottom: 1rem;
+  font-weight: 500;
 }
 .footer .footer-links {
   list-style: none;
@@ -251,18 +340,43 @@ body {
   font-size: 15px;
   color: #7e7e7e;
 }
-.restaurants .cards .card .card-content i.fa-heart {
+.restaurants .cards .card .card-content .heart-toggle {
   position: absolute;
   top: 20px;
   right: 20px;
-  font-size: 20px;
-  color: #aaa;
+  width: 24px;
+  height: 24px;
+}
+.restaurants .cards .card .card-content .heart-toggle input {
+  display: none;
+}
+.restaurants .cards .card .card-content .heart-toggle .fa-heart {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 24px;
+  transition: opacity 0.8s ease, transform 0.3s ease;
+  cursor: pointer;
+}
+.restaurants .cards .card .card-content .heart-toggle .heart-empty {
+  color: black;
+  opacity: 1;
+}
+.restaurants .cards .card .card-content .heart-toggle .heart-full {
+  color: #9356DC;
+  opacity: 0;
+}
+.restaurants .cards .card .card-content .heart-toggle input:checked ~ .heart-empty {
+  opacity: 0;
+}
+.restaurants .cards .card .card-content .heart-toggle input:checked ~ .heart-full {
+  opacity: 1;
 }
 
 h1 {
   font-family: "Shrikhand", cursive;
   text-align: center;
-  font-weight: bold;
+  font-weight: 500;
   font-size: 2rem;
   margin: 20px 0;
 }
@@ -298,6 +412,7 @@ h1 {
   font-family: "Shrikhand", cursive;
   font-size: 24px;
   margin: 0;
+  font-weight: 500;
 }
 .menu-container .menu-title i {
   font-size: 22px;
@@ -394,7 +509,7 @@ h1 {
 .menu-container .menu-section .dish .dish-content .dish-text h4 {
   font-size: 16px;
   margin: 0 0 5px 0;
-  font-weight: 500;
+  font-weight: bold;
 }
 .menu-container .menu-section .dish .dish-content .dish-text p {
   margin: 0;

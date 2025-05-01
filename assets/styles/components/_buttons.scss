@@ -3,7 +3,7 @@
 .explore-button {
     display: block;
     margin: 40px auto 0 auto;
-    background: linear-gradient(#9356DC, #FF79DA);
+    background: linear-gradient($primary-color, $secondary-color);
     color: white;
     border: none;
     padding: 15px 30px;
@@ -24,7 +24,7 @@
 .btn-order {
     display: block;
     margin: 40px auto 0 auto;
-    background: linear-gradient(#9356DC, #FF79DA);
+background: linear-gradient($primary-color, $secondary-color);
     color: white;
     border: none;
     padding: 15px 30px;

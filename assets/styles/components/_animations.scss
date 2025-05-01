@@ -1,3 +1,58 @@
+/* Loader full screen */
+#loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: white;
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: fadeOut 1s ease 2.5s forwards; /* Disparition après 2.5s */
+}
+
+/* Animation d'apparition de lettres */
+.loader-text span {
+  font-family: 'Shrikhand', cursive;
+  font-size: 2.5rem;
+  color: #9356DC;
+  opacity: 0;
+  animation: appear 0.4s ease forwards;
+  display: inline-block;
+}
+
+.loader-text span:nth-child(1) { animation-delay: 0s; }
+.loader-text span:nth-child(2) { animation-delay: 0.2s; }
+.loader-text span:nth-child(3) { animation-delay: 0.4s; }
+.loader-text span:nth-child(4) { animation-delay: 0.6s; }
+.loader-text span:nth-child(5) { animation-delay: 0.8s; }
+.loader-text span:nth-child(6) { animation-delay: 1s; }
+.loader-text span:nth-child(7) { animation-delay: 1.2s; }
+.loader-text span:nth-child(8) { animation-delay: 1.4s; }
+
+@keyframes appear {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+}
+
+/* Disparition du loader */
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+// effet des menus 
+
 @keyframes fadeInSlide {
     0% {
       opacity: 0;
@@ -9,28 +64,44 @@
     }
   }
 // Style du label pour le cœur
-.heart-container {
+
+.heart-toggle {
+    position: relative;
     display: inline-block;
-    cursor: pointer;
+    width: 24px;
+    height: 24px;
   
-    .heart-checkbox {
-      display: none; // cache le checkbox
+    input {
+      display: none;
     }
   
     .fa-heart {
-      color: #aaa; // couleur du cœur vide
+      position: absolute;
+      top: 0;
+      left: 0;
       font-size: 24px;
-      transition: color 0.3s ease;
+      transition: opacity 0.3s ease, transform 0.3s ease;
+      cursor: pointer;
     }
   
-    // Au survol, cœur change de couleur
-    .heart-container:hover .fa-heart {
-      color: #e63946; // cœur devient rouge lors du survol
+    .heart-empty {
+      color: #bbb; // gris clair (contour vide)
+      opacity: 1;
     }
   
-    // Lorsqu'on clique et que le checkbox est coché, le cœur devient rempli
-    .heart-checkbox:checked + .fa-heart {
-      color: #e63946; // cœur rempli de couleur rouge
+    .heart-full {
+      color: #9356DC; // violet plein
+      opacity: 0;
+      // transform: scale(0.9);
+    }
+  
+    input:checked ~ .heart-empty {
+      opacity: 0;
+    }
+  
+    input:checked ~ .heart-full {
+      opacity: 1;
+    //   transform: scale(1.2);
     }
   }
   

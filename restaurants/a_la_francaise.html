@@ -3,20 +3,18 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ohmyfood Paris</title>
+    <title>À la française</title>
     <link rel="stylesheet" href="../assets/styles/index.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-      integrity="sha512-Avb2QiuDEEvB4bZJYdft2mNjVShBftLdPG8FJ0V7irTLQ8Uo0qcPxh4Plq7G5tGm0rU+1SPhVotteLpBERwTkw=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
     />
     <link
       href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap"
       rel="stylesheet"
     />
   </head>
+
   <body>
     <!-- Header -->
     <header class="header-menu">
@@ -29,130 +27,151 @@
     <!-- Image de couverture -->
     <div class="cover">
       <img
-        src="/assets/images/restau/toa-heftiba-DQKerTsQwi0-unsplash.jpg"
+        src="../assets/images/restau/toa-heftiba-DQKerTsQwi0-unsplash.jpg"
         alt="À la française"
       />
     </div>
 
-    <!-- Section menu -->
     <main class="menu-container">
       <div class="menu-title">
         <h2>À la française</h2>
-        <i class="fa-regular fa-heart"></i>
+        <label class="heart-toggle">
+          <input type="checkbox" />
+          <i class="fa-regular fa-heart heart-empty"></i>
+          <i class="fa-solid fa-heart heart-full"></i>
+        </label>
       </div>
 
       <!-- Entrées -->
       <section class="menu-section">
         <h3>Entrées</h3>
 
-        <div class="dish">
-          <div class="dish-text">
-            <h4>Tartare de poulpe acidulé</h4>
-            <p>Aux zestes d'orange</p>
+        <label class="dish">
+          <input type="checkbox" class="dish-toggle" />
+          <div class="dish-content">
+            <div class="dish-text">
+              <h4>Tartare de poulpe acidulé</h4>
+              <p>Aux zestes d'orange</p>
+            </div>
+            <div class="dish-price">25€</div>
+            <div class="check-icon"><i class="fa-solid fa-check"></i></div>
           </div>
-          <div class="dish-price">25€</div>
-          <div class="check-icon"><i class="fa-solid fa-check"></i></div>
-        </div>
+        </label>
 
-        <div class="dish">
-          <div class="dish-text">
-            <h4>Velouté de légumes d'antan</h4>
-            <p>Carotte, panais, topinambour</p>
+        <label class="dish">
+          <input type="checkbox" class="dish-toggle" />
+          <div class="dish-content">
+            <div class="dish-text">
+              <h4>Velouté de légumes d’antan</h4>
+              <p>Carotte, panais, topinambour</p>
+            </div>
+            <div class="dish-price">35€</div>
+            <div class="check-icon"><i class="fa-solid fa-check"></i></div>
           </div>
-          <div class="dish-price">35€</div>
-          <div class="check-icon"><i class="fa-solid fa-check"></i></div>
-        </div>
-
-        <div class="dish">
-          <div class="dish-text">
-            <h4>Soupe à l'oignon</h4>
-            <p>Revisitée</p>
+        </label>
+        <label class="dish">
+          <input type="checkbox" class="dish-toggle" />
+          <div class="dish-content">
+            <div class="dish-text">
+              <h4>Soupe à l'oignon</h4>
+              <p>Revisitée</p>
+            </div>
+            <div class="dish-price">20€</div>
+            <div class="check-icon"><i class="fa-solid fa-check"></i></div>
           </div>
-          <div class="dish-price">20€</div>
-          <div class="check-icon"><i class="fa-solid fa-check"></i></div>
-        </div>
+        </label>
       </section>
 
       <!-- Plats -->
       <section class="menu-section">
         <h3>Plats</h3>
 
-        <div class="dish">
-          <div class="dish-text">
-            <h4>Coquilles Saint-Jacques</h4>
-            <p>Accompagnées d'une purée de panais</p>
+        <label class="dish">
+          <input type="checkbox" class="dish-toggle" />
+          <div class="dish-content">
+            <div class="dish-text">
+              <h4>Filet de dorade</h4>
+              <p>Aux agrumes</p>
+            </div>
+            <div class="dish-price">40€</div>
+            <div class="check-icon"><i class="fa-solid fa-check"></i></div>
           </div>
-          <div class="dish-price">40€</div>
-          <div class="check-icon"><i class="fa-solid fa-check"></i></div>
-        </div>
+        </label>
 
-        <div class="dish">
-          <div class="dish-text">
-            <h4>Magret de canard</h4>
-            <p>Et parmentier de pommes de terre</p>
+        <label class="dish">
+          <input type="checkbox" class="dish-toggle" />
+          <div class="dish-content">
+            <div class="dish-text">
+              <h4>Magret de canard</h4>
+              <p>Et parmentier de pommes de terre</p>
+            </div>
+            <div class="dish-price">35€</div>
+            <div class="check-icon"><i class="fa-solid fa-check"></i></div>
           </div>
-          <div class="dish-price">35€</div>
-          <div class="check-icon"><i class="fa-solid fa-check"></i></div>
-        </div>
+        </label>
 
-        <div class="dish">
-          <div class="dish-text">
-            <h4>Pigeonneau d’Ille-et-Vilaine</h4>
-            <p>Sur son lit de gnocchis aux légumes</p>
+        <label class="dish">
+          <input type="checkbox" class="dish-toggle" />
+          <div class="dish-content">
+            <div class="dish-text">
+              <h4>Pigeonneau d’Ille-et-Vilaine</h4>
+              <p>Sur son lit de gnocchis aux légumes</p>
+            </div>
+            <div class="dish-price">44€</div>
+            <div class="check-icon"><i class="fa-solid fa-check"></i></div>
           </div>
-          <div class="dish-price">44€</div>
-          <div class="check-icon"><i class="fa-solid fa-check"></i></div>
-        </div>
+        </label>
       </section>
 
       <!-- Desserts -->
       <section class="menu-section">
         <h3>Desserts</h3>
 
-        <div class="dish">
-          <div class="dish-text">
-            <h4>Pétales de violettes glacés</h4>
-            <p>Et purée de noisettes</p>
+        <label class="dish">
+          <input type="checkbox" class="dish-toggle" />
+          <div class="dish-content">
+            <div class="dish-text">
+              <h4>Pétales de violettes glacés</h4>
+              <p>Et purée de noisettes</p>
+            </div>
+            <div class="dish-price">18€</div>
+            <div class="check-icon"><i class="fa-solid fa-check"></i></div>
           </div>
-          <div class="dish-price">18€</div>
-          <div class="check-icon"><i class="fa-solid fa-check"></i></div>
-        </div>
+        </label>
 
-        <div class="dish">
-          <div class="dish-text">
-            <h4>Fondant au chocolat</h4>
-            <p>Revisité</p>
+        <label class="dish">
+          <input type="checkbox" class="dish-toggle" />
+          <div class="dish-content">
+            <div class="dish-text">
+              <h4>Fondant au chocolat</h4>
+              <p>Revisité</p>
+            </div>
+            <div class="dish-price">22€</div>
+            <div class="check-icon"><i class="fa-solid fa-check"></i></div>
           </div>
-          <div class="dish-price">22€</div>
-          <div class="check-icon"><i class="fa-solid fa-check"></i></div>
-        </div>
+        </label>
 
-        <div class="dish">
-          <div class="dish-text">
-            <h4>Millefeuille croustillant</h4>
-            <p>Myrtilles et pâte d’amande</p>
+        <label class="dish">
+          <input type="checkbox" class="dish-toggle" />
+          <div class="dish-content">
+            <div class="dish-text">
+              <h4>Millefeuille croustillant</h4>
+              <p>Myrtilles et pâte d’amande</p>
+            </div>
+            <div class="dish-price">23€</div>
+            <div class="check-icon"><i class="fa-solid fa-check"></i></div>
           </div>
-          <div class="dish-price">23€</div>
-          <div class="check-icon"><i class="fa-solid fa-check"></i></div>
-        </div>
+        </label>
       </section>
 
-      <!-- Bouton commander -->
       <button class="btn-order">Commander</button>
     </main>
 
-    <!-- Footer -->
     <footer class="footer">
       <h2 class="footer-logo">ohmyfood</h2>
       <ul class="footer-links">
-        <li>
-          <i class="fa-solid fa-utensils"></i>
-          Proposer un restaurant
-        </li>
-        <li>
-          <i class="fa-solid fa-handshake-angle"></i>
-          Devenir partenaire
-        </li>
+        <li><i class="fa-solid fa-utensils"></i> Proposer un restaurant</li>
+        <li><i class="fa-solid fa-handshake-angle"></i> Devenir partenaire</li>
         <li>Mentions légales</li>
         <li><a href="mailto:contact@ohmyfood.fr">Contact</a></li>
       </ul>

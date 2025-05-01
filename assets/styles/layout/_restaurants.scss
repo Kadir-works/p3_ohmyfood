@@ -42,15 +42,47 @@
             color: #7e7e7e;
           }
   
-          i.fa-heart {
+          .heart-toggle {
             position: absolute;
             top: 20px;
             right: 20px;
-            font-size: 20px;
-            color: #aaa;
-          }
+            width: 24px;
+            height: 24px;
+        
+            input {
+              display: none;
+            }
+        
+            .fa-heart {
+              position: absolute;
+              top: 0;
+              left: 0;
+              font-size: 24px;
+              transition: opacity 0.8s ease, transform 0.3s ease;
+              cursor: pointer;
+            }
+        
+            .heart-empty {
+              color: black;
+              opacity: 1;
+            }
+        
+            .heart-full {
+              color: #9356DC;
+              opacity: 0;
+              // transform: scale(0.9);
+            }
+        
+            input:checked ~ .heart-empty {
+              opacity: 0;
+            }
+        
+            input:checked ~ .heart-full {
+              opacity: 1;
+            }
         }
       }
     }
   }
+}
   
