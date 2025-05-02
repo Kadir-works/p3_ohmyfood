@@ -1,30 +1,4 @@
-// ----------------------------
-// TITRE PRINCIPAL
-// ----------------------------
-h1 {
-  font-family: 'Shrikhand', cursive;
-  text-align: center;
-  font-weight: 500;
-  font-size: 2rem;
-  margin: 20px 0;
-}
 
-// ----------------------------
-// IMAGE DE COUVERTURE
-// ----------------------------
-.cover {
-  width: 100%;
-  height: 300px;
-  overflow: hidden;
-  position: relative;
-
-  img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-  }
-}
 
 // ----------------------------
 // CONTAINER PRINCIPAL DU MENU
@@ -50,16 +24,7 @@ h1 {
       font-weight: 500;
     }
 
-    i {
-      font-size: 22px;
-      color: #000;
-      cursor: pointer;
-
-      &:hover {
-        color: #9356DC;
-        transition: color 0.3s;
-      }
-    }
+   
   }
 
   // ----------------------------

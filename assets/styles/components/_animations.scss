@@ -80,19 +80,18 @@
       top: 0;
       left: 0;
       font-size: 24px;
-      transition: opacity 0.3s ease, transform 0.3s ease;
+      transition: opacity 0.8s ease, transform 0.3s ease;
       cursor: pointer;
     }
   
     .heart-empty {
-      color: #bbb; // gris clair (contour vide)
+      color: black;
       opacity: 1;
     }
   
     .heart-full {
       color: #9356DC; // violet plein
       opacity: 0;
-      // transform: scale(0.9);
     }
   
     input:checked ~ .heart-empty {
@@ -101,7 +100,6 @@
   
     input:checked ~ .heart-full {
       opacity: 1;
-    //   transform: scale(1.2);
     }
   }
   
