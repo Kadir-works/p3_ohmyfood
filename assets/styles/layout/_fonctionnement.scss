@@ -1,6 +1,11 @@
 .fonctionnement {
     background-color: #fff;
     padding: 30px 20px;
+
+    .fonctionnement-inner {
+      max-width: 1080px;
+      margin: 0 auto;
+    }
   
     h2 {
       font-size: 24px;
@@ -52,6 +57,40 @@
           justify-content: center;
         }
       }
+    }
+  }
+// version descktop 
+
+  @media (min-width: 1024px) {
+    .fonctionnement {
+      padding: 50px 80px;
+
+  
+      h2 {
+        text-align: left;
+      }
+  
+      .card-fonctionne {
+        flex-direction: row; // au lieu de column
+        justify-content: space-between;
+        gap: 40px;
+      }
+  
+      .step {
+        flex: 1;
+      }
+    }
+  }
+  // version tablette 
+
+  @media (min-width: 768px) and (max-width: 1023px) {
+    .fonctionnement {
+      max-width: 620px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+    .fonctionnement .card-fonctionne {
+      gap: 30px;
     }
   }
   

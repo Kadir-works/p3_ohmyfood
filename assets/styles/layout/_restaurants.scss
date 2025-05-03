@@ -1,6 +1,7 @@
 .restaurants {
-    // background-color: #f6f6f6;
+    background-color: #f6f6f6;
     padding: 30px 20px;
+
   
     h2 {
       font-size: 24px;
@@ -54,4 +55,38 @@
     }
   }
 
+// version tablette 
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .restaurants-inner {
+    max-width: 620px;
+    margin: 0 auto;
+    padding: 40px 20px;
+  }
+  .fonctionnement .card-fonctionne {
+    gap: 30px;
+  }
+} 
+
+// version descktop
+  @media (min-width: 1024px) {
+    .restaurants {
+      padding: 50px 80px;
+
+      .restaurants-inner {
+        max-width: 1080px;
+        margin: 0 auto;
+      }
+  
+      h2 {
+        text-align: left;
+      }
+  
+      .cards {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px 60px;
+      }
+    }
+  }
   

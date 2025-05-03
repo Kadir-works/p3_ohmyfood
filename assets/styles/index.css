@@ -356,33 +356,67 @@ h1 {
 .footer {
   background-color: #353535;
   color: #fff;
-  padding: 2rem;
-  text-align: left;
+  padding: 2rem 1.5rem;
 }
-.footer .footer-logo {
+.footer .footer-inner {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+@media (min-width: 1024px) {
+  .footer .footer-inner {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: flex-end;
+    justify-content: flex-start;
+    height: 114px;
+    padding: 0 20px;
+  }
+}
+.footer .footer-inner .footer-logo {
   font-family: "Shrikhand", cursive;
   font-size: 1.5rem;
   margin-bottom: 1rem;
   font-weight: 500;
 }
-.footer .footer-links {
+@media (min-width: 1024px) {
+  .footer .footer-inner .footer-logo {
+    margin-bottom: 0;
+    font-size: 18px;
+  }
+}
+.footer .footer-inner .footer-links {
   list-style: none;
   padding: 0;
 }
-.footer .footer-links li {
+@media (min-width: 1024px) {
+  .footer .footer-inner .footer-links {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    margin-right: 6em;
+    padding: 4px;
+  }
+}
+.footer .footer-inner .footer-links li {
   margin: 0.5rem 0;
   display: flex;
   align-items: center;
+  font-size: 14px;
 }
-.footer .footer-links li i {
+.footer .footer-inner .footer-links li i {
   margin-right: 10px;
 }
-.footer .footer-links li a {
+.footer .footer-inner .footer-links li a {
   color: #fff;
   text-decoration: none;
 }
-.footer .footer-links li a:hover {
+.footer .footer-inner .footer-links li a:hover {
   text-decoration: underline;
+}
+@media (min-width: 1024px) {
+  .footer .footer-inner .footer-links li {
+    margin: 0;
+  }
 }
 
 .location {
@@ -407,6 +441,7 @@ h1 {
   flex-direction: column;
   padding: 40px 25px;
   gap: 17px;
+  background: #f6f6f6;
 }
 .reservation h2 {
   text-align: center;
@@ -419,6 +454,10 @@ h1 {
 .fonctionnement {
   background-color: #fff;
   padding: 30px 20px;
+}
+.fonctionnement .fonctionnement-inner {
+  max-width: 1080px;
+  margin: 0 auto;
 }
 .fonctionnement h2 {
   font-size: 24px;
@@ -467,7 +506,34 @@ h1 {
   justify-content: center;
 }
 
+@media (min-width: 1024px) {
+  .fonctionnement {
+    padding: 50px 80px;
+  }
+  .fonctionnement h2 {
+    text-align: left;
+  }
+  .fonctionnement .card-fonctionne {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 40px;
+  }
+  .fonctionnement .step {
+    flex: 1;
+  }
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .fonctionnement {
+    max-width: 620px;
+    margin: 0 auto;
+    padding: 40px 20px;
+  }
+  .fonctionnement .card-fonctionne {
+    gap: 30px;
+  }
+}
 .restaurants {
+  background-color: #f6f6f6;
   padding: 30px 20px;
 }
 .restaurants h2 {
@@ -513,4 +579,32 @@ h1 {
   right: 20px;
   width: 24px;
   height: 24px;
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .restaurants-inner {
+    max-width: 620px;
+    margin: 0 auto;
+    padding: 40px 20px;
+  }
+  .fonctionnement .card-fonctionne {
+    gap: 30px;
+  }
+}
+@media (min-width: 1024px) {
+  .restaurants {
+    padding: 50px 80px;
+  }
+  .restaurants .restaurants-inner {
+    max-width: 1080px;
+    margin: 0 auto;
+  }
+  .restaurants h2 {
+    text-align: left;
+  }
+  .restaurants .cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px 60px;
+  }
 }/*# sourceMappingURL=index.css.map */
