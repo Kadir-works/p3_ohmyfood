@@ -371,6 +371,9 @@ h1, h2, h3 {
   max-width: 1440px;
   margin: 0 auto;
 }
+.footer .footer-inner h2 {
+  color: white;
+}
 @media (min-width: 1024px) {
   .footer .footer-inner {
     display: flex;
