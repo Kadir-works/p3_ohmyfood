@@ -16,5 +16,16 @@
 // couleur
 $primary-color: #9356DC;
 $secondary-color: #FF79DA;
+$tertiaire-color: #99E2D0;
 
 
+h1 {
+  font-family: 'Shrikhand', cursive;
+  font-size: 28px;
+  font-weight: 500;
+  margin: 20px 0;
+  text-align: center;
+}
+h1, h2, h3 {
+  color: black;
+}
