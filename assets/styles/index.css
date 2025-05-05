@@ -197,7 +197,10 @@ h1, h2, h3 {
 }
 
 @media (min-width: 1024px) {
-  .cover img {
+  .cover {
+    height: 480px;
+  }
+  img {
     height: 400px;
     width: 100%;
     -o-object-fit: cover;
@@ -206,8 +209,7 @@ h1, h2, h3 {
   .menu-container {
     max-width: 1055px;
     margin: -50px auto 0;
-    padding: 50px 80px;
-    border-radius: 40px;
+    top: 0;
   }
   .menu-title {
     font-size: 28px;
