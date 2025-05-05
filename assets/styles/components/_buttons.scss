@@ -1,9 +1,10 @@
 
-// le bouton de la page d'accueil
-.explore-button {
+// le bouton de la page d'accueil et menu 
+
+.btn-order {
     display: block;
     margin: 40px auto 0 auto;
-    background: linear-gradient($primary-color, $secondary-color);
+background: linear-gradient($secondary-color, $primary-color);
     color: white;
     border: none;
     padding: 15px 30px;
@@ -13,28 +14,9 @@
     transition: 0.3s;
     text-decoration: none;
 
-    &:hover {
-      filter: brightness(1.1);
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    }
-  }
-
-//   le bouton de la page de menu
-
-.btn-order {
-    display: block;
-    margin: 40px auto 0 auto;
-background: linear-gradient($primary-color, $secondary-color);
-    color: white;
-    border: none;
-    padding: 15px 30px;
-    border-radius: 25px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: 0.3s;
 
     &:hover {
-      filter: brightness(1.1);
+      filter: brightness(1.1); //éclaircissement de 10%
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     }
   }
