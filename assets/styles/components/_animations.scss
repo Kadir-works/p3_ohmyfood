@@ -54,15 +54,16 @@
 // effet des menus 
 
 @keyframes fadeInSlide {
-    0% {
-      opacity: 0;
-      transform: translateY(20px);
-    }
-    100% {
-      opacity: 1;
-      transform: translateY(0);
-    }
+  0% {
+    opacity: 0;               // L'élément est invisible
+    transform: translateY(20px); // Il est décalé vers le bas
   }
+  100% {
+    opacity: 1;               // Il devient visible
+    transform: translateY(0); // Il revient à sa place normale
+  }
+}
+
 // Style pour le cœur
 
 .heart-toggle {

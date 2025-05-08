@@ -130,7 +130,7 @@
     // ANIMATION D’APPARITION DES PLATS
     .dish {
       opacity: 0;
-      animation: fadeInSlide 1s ease forwards;
+      animation: fadeInSlide 1s ease forwards; //forwards : garde l'état final de l’animation
 
       @for $i from 1 through 10 {
         &:nth-child(#{$i}) {
@@ -229,7 +229,7 @@
         }
       }
 
-      // ÉTAT : Hover (non sélectionné)
+
       input[type="checkbox"]:not(:checked) {
         .check-icon {
           right: 15px;
