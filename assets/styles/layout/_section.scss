@@ -1,7 +1,5 @@
 .location {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  @include flex-center;
     background-color: #EAEAEA;
     height: 50px;
     position: relative; // nécessaire pour les ombres internes
@@ -22,9 +20,7 @@
 
 // <!-- Section 2: Réservez le menu -->
 .reservation{
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @include flex-center;
     flex-direction: column;
     padding: 40px 25px;
     gap: 17px;

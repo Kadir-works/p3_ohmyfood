@@ -161,25 +161,24 @@ h1, h2, h3 {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-/* Header */
-.header-menu {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.card:not(.new) .badge-new {
+  display: none;
+}
+
+.card-image-wrapper {
   position: relative;
+  display: block;
 }
-.header-menu .back-btn {
+
+.badge-new {
   position: absolute;
-  left: 20px;
-  font-size: 24px;
-  color: black;
-  text-decoration: none;
-}
-.header-menu h1 {
-  font-family: "Shrikhand", cursive;
-  font-size: 28px;
-  font-weight: 500;
-  margin: 20px 0;
+  top: 10px;
+  right: 10px;
+  background-color: #99E2D0; /* vert clair */
+  color: #1b6150; /* vert foncé */
+  padding: 5px 10px;
+  font-size: 12px;
+  font-weight: bold;
 }
 
 .cover {
@@ -392,6 +391,27 @@ h1, h2, h3 {
   opacity: 1;
 }
 
+/* Header */
+.header-menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.header-menu .back-btn {
+  position: absolute;
+  left: 20px;
+  font-size: 24px;
+  color: black;
+  text-decoration: none;
+}
+.header-menu h1 {
+  font-family: "Shrikhand", cursive;
+  font-size: 28px;
+  font-weight: 500;
+  margin: 20px 0;
+}
+
 .footer {
   background-color: #353535;
   color: #fff;
@@ -463,8 +483,8 @@ h1, h2, h3 {
 
 .location {
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   background-color: #EAEAEA;
   height: 50px;
   position: relative;
@@ -480,8 +500,8 @@ h1, h2, h3 {
 
 .reservation {
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   flex-direction: column;
   padding: 40px 25px;
   gap: 17px;

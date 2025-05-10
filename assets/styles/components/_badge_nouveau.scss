@@ -1,0 +1,23 @@
+// Seules les .card avec la classe .new afficheront le badge.
+// Les autres cartes n'afficheront pas le badge.
+
+.card:not(.new) .badge-new {
+    display: none;
+  }
+
+.card-image-wrapper {
+    position: relative;
+    display: block;
+  }
+  
+  .badge-new {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color:$tertiaire-color; /* vert clair */
+    color: #1b6150; /* vert foncé */
+    padding: 5px 10px;
+    font-size: 12px;
+    font-weight: bold;
+  }
+  
